@@ -4,6 +4,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { ProductsComponent } from './Components/products/products.component'
 import { LoginGuardService } from './Services/login-guard.service';
 import { SaveDataGuardService } from './Services/saveData-guard.service';
+import { ChatComponent } from './Components/chat/chat.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [
     component: ProductsComponent,
     canActivate: [LoginGuardService],
     canDeactivate: [SaveDataGuardService]
-  }
+  },
+  { path: 'chat', component: ChatComponent, outlet: 'aux' }
 ];
 
 @NgModule({

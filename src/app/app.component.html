@@ -2,6 +2,11 @@
   <div [routerLink]="['/']" class="link mr-1">Home</div>
   <div [routerLink]="['/product']" class="link">Products</div>
 </div>
+<div class="row">
+  <div [routerLink]="[{ outlets: { aux: 'chat' }}]" class="link mr-1">Open chat</div>
+  <div [routerLink]="[{ outlets: { aux: null }}]" class="link">Close chat</div>
+</div>
 <div class="">
   <router-outlet></router-outlet>
+  <router-outlet name="aux"></router-outlet>
 </div>
