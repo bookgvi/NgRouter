@@ -8,7 +8,8 @@ import { ChatComponent } from './Components/chat/chat.component';
 import LuxuryModule from './Modules/luxury.module';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   {
     path: 'product',
     component: ProductsComponent,
