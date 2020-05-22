@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule, RouterModule.forChild([
     { path: '', component: LuxuryComponent }
   ])],
-  declarations: [LuxuryComponent],
-  exports: [LuxuryComponent]
+  declarations: [LuxuryComponent]
 })
 export default class LuxuryModule {}
