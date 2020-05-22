@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './Components/home/home.component';
 import { ProductsComponent } from './Components/products/products.component'
-import { LoginGuardService } from './Services/login-guard.service';
-import { SaveDataGuardService } from './Services/saveData-guard.service';
+import { LoginGuardService } from './Services/RouterGuards/login-guard.service';
+import { SaveDataGuardService } from './Services/RouterGuards/saveData-guard.service';
 import { ChatComponent } from './Components/chat/chat.component';
 
 const routes: Routes = [
