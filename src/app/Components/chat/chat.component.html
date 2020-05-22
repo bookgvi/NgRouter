@@ -1,3 +1,8 @@
 <label>
   <input type="text">
 </label>
+<ul>
+  <li *ngFor="let message of chatHistory;">
+    {{ message.text }}
+  </li>
+</ul>
