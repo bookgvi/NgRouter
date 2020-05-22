@@ -5,8 +5,9 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [CommonModule, RouterModule.forChild([
-    { path: 'luxury', component: LuxuryComponent }
+    { path: '', component: LuxuryComponent }
   ])],
-  declarations: [LuxuryComponent]
+  declarations: [LuxuryComponent],
+  exports: [LuxuryComponent]
 })
-export class LuxuryModule {}
+export default class LuxuryModule {}

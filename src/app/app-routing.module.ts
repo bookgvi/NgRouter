@@ -5,6 +5,7 @@ import { ProductsComponent } from './Components/products/products.component'
 import { LoginGuardService } from './Services/RouterGuards/login-guard.service';
 import { SaveDataGuardService } from './Services/RouterGuards/saveData-guard.service';
 import { ChatComponent } from './Components/chat/chat.component';
+import LuxuryModule from './Modules/luxury.module';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
     canActivate: [LoginGuardService],
     canDeactivate: [SaveDataGuardService]
   },
-  { path: 'chat', component: ChatComponent, outlet: 'aux' }
+  { path: 'chat', component: ChatComponent, outlet: 'aux' },
+  { path: 'luxury', loadChildren: () => LuxuryModule }
 ];
 
 @NgModule({

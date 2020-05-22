@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ServiceModule } from './Modules/service.module';
-import { LuxuryModule } from './Modules/luxury.module';
+import LuxuryModule from './Modules/luxury.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +20,6 @@ import { ChatComponent } from './Components/chat/chat.component';
     BrowserModule,
     AppRoutingModule,
     ServiceModule,
-    LuxuryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
