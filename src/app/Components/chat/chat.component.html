@@ -1,7 +1,10 @@
 <label>
-  <input type="text">
+  <input #inputMessage type="text">
 </label>
-<ul>
+<div class="mt-1">
+  Messages history:
+</div>
+<ul class="m-0">
   <li *ngFor="let message of chatHistory;">
     {{ message.text }}
   </li>
