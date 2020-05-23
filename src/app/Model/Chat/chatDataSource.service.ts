@@ -14,7 +14,7 @@ export class ChatDataSourceService {
     ]
   }
 
-  public getMessages(): Observable<IMessage[]> {
+  public get getMessages(): Observable<IMessage[]> {
     return new Observable<IMessage[]>(observer => {
       observer.next(this.messages);
     })

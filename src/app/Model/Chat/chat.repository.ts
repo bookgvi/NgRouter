@@ -6,7 +6,7 @@ import { IMessage } from './message.interface';
 export class ChatRepository {
   private chatMessages: IMessage[];
   constructor(private chat: ChatDataSourceService) {
-    this.chat.getMessages().subscribe(data => this.chatMessages = data)
+    this.chat.getMessages.subscribe(data => this.chatMessages = data)
   }
 
   public get getMessages(): IMessage[] {
@@ -14,7 +14,7 @@ export class ChatRepository {
   }
 
   public set addMessage(text: string) {
-    const id = this.chat.getMessages()['length'];
+    const id = this.chatMessages.length;
     this.chat.addMessage({ id, text });
   }
 }
